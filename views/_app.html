@@ -40,7 +40,7 @@
       d3.csv = d3.dsv(";", "text/csv");
       d3.csv("/data/data_w_header.csv", function(error, data) {
 
-        data.forEach(function(d) {
+        _.each(data, function(d) {
           d.date = parseDate(d.year+"-"+d.month);
           d.rate = +d.rate;
         });
